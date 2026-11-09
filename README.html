@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Holiday Light Studio iPad - README</title><style>body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:800px;padding:24px;margin:auto;color:#1b2733}h1,h2{line-height:1.3;color:#172b4d}h1{font-size:1.7rem}h2{margin-top:2rem}li{margin:.45rem 0}code{background:#f2f4f7;padding:2px 5px;border-radius:4px;word-break:break-word}a{color:#0a65c8}p{margin:12px 0}</style></head><body><h1>Holiday Light Studio — iPad Edition</h1>
+<h2>What you downloaded</h2>
+<p>This is a <strong>static web dashboard</strong> for organizing six holiday-light apps (Govee, LotusLamp X, Dazzle Bright, Philips Hue, WiZ, and BRmesh), devices, shows, playlists, and schedules. It includes a <strong>Keep Screen Awake</strong> control.</p>
+<p><strong>Important:</strong> This is an organizer, not a fully integrated lighting/music controller. Merely creating a schedule in this dashboard does <strong>not</strong> guarantee the lights or music will start unattended. Your iPad must keep the page visible for the screen-wake feature, and iPadOS may still release the wake lock. Direct control depends on each manufacturer's app, device model, and any supported Apple Shortcuts actions.</p>
+<h2>Files inside the download</h2>
+<ul>
+<li><code>index.html</code> — main dashboard; this must be at the top level of a published website</li>
+<li><code>manifest.webmanifest</code> — Home Screen app details</li>
+<li><code>sw.js</code> — offline caching when hosted on a compatible HTTPS website</li>
+<li><code>icon.png</code> and <code>icon.svg</code> — dashboard icons</li>
+<li><code>README.md</code> — these instructions</li>
+<li><code>README.html</code> — easy-to-open version of these instructions</li>
+</ul>
+<h2>Method A — Try the dashboard locally on your iPad (without GitHub)</h2>
+<ol>
+<li>Download the ZIP file from ChatGPT to the <strong>Files</strong> app.</li>
+<li>Open <strong>Files &gt; Downloads</strong>, then tap the ZIP once to extract it.</li>
+<li>Tap <code>README.html</code> to read these instructions.</li>
+<li>Try opening <code>index.html</code> from the extracted folder. Depending on the iPadOS version and how Files opens it, this may only show a preview or may restrict browser storage and app features.</li>
+</ol>
+<p><strong>For reliable app-like Home Screen operation, publish the five website files using Method B.</strong> Opening a local HTML file is not the equivalent of installing a hosted web app.</p>
+<h2>Method B — Publish using GitHub Pages; no ChatGPT-to-GitHub connection needed</h2>
+<ol>
+<li>On your iPad, open <strong>Safari</strong> and go to https://github.com/new. Sign in with your GitHub account.</li>
+<li>Under <strong>Repository name</strong>, enter <code>holiday-light-studio-ipad</code>. Set visibility to <strong>Public</strong>. You can check <strong>Add a README file</strong>. Tap <strong>Create repository</strong>.</li>
+<li>Open the newly created repository and choose <strong>Add file &gt; Upload files</strong>. If GitHub's mobile layout hides the option, use Safari's <strong>Request Desktop Website</strong>.</li>
+<li>In the file picker, open the extracted Holiday Light Studio folder in <strong>Files &gt; Downloads</strong>. Select exactly these FIVE files: <code>index.html</code>, <code>manifest.webmanifest</code>, <code>sw.js</code>, <code>icon.png</code>, <code>icon.svg</code>.</li>
+<li><strong>Do not upload the ZIP or private backups.</strong> The five website files must be at the repository root, not within another folder.</li>
+<li>Enter a commit message such as <code>Add holiday light dashboard</code> and tap <strong>Commit changes</strong>.</li>
+<li>Within your repository, open <strong>Settings &gt; Pages</strong>. Under <strong>Build and deployment</strong>, choose <strong>Deploy from a branch</strong>, then <strong>main</strong> and <strong>/(root)</strong>, and tap <strong>Save</strong>.</li>
+<li>Once GitHub Pages publishes the site, open the URL displayed under <strong>Settings &gt; Pages</strong>. It will typically look like <code>https://YOUR-USERNAME.github.io/holiday-light-studio-ipad/</code>.</li>
+<li>In Safari, tap <strong>Share &gt; Add to Home Screen</strong>, enable <strong>Open as Web App</strong> if offered, and tap <strong>Add</strong>.</li>
+<li>Launch the new icon from your iPad Home Screen. Create your device groups, scenes, schedules, and playlist links.</li>
+<li>Use the app's <strong>Export Backup</strong> setting periodically, and store backup files privately in Files. <strong>Never upload backups with private information to your public GitHub repository.</strong></li>
+</ol>
+<h2>Basic troubleshooting</h2>
+<ul>
+<li><strong>GitHub wants 2FA:</strong> Use the authenticator you configured in Apple Passwords. You do not need to connect GitHub to ChatGPT to upload files in Safari.</li>
+<li><strong>GitHub Pages shows 404:</strong> Verify that <code>index.html</code> is in the repository root and <strong>Settings &gt; Pages</strong> is configured for <code>main</code> / <code>/(root)</code>. Check the site's publish status there.</li>
+<li><strong>App does not appear on Home Screen:</strong> Open the <em>published URL in Safari</em>, not the ZIP or local HTML preview, then use <strong>Share &gt; Add to Home Screen</strong>.</li>
+<li><strong>iPad screen still sleeps:</strong> Keep the dashboard in the foreground and enable the wake feature. You can also adjust <strong>Settings &gt; Display &amp; Brightness &gt; Auto-Lock</strong> if available; iPadOS and power management may still limit behavior.</li>
+<li><strong>Schedules do not switch lights:</strong> That is expected without a configured compatible integration or shortcut; the organizer does not bypass manufacturers' controls.</li>
+</ul>
+<h2>References (APA style)</h2>
+<p>GitHub. (n.d.). <em>Creating a new repository</em>. GitHub Docs. https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository</p>
+<p>GitHub. (n.d.). <em>Adding a file to a repository</em>. GitHub Docs. https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository</p>
+<p>GitHub. (n.d.). <em>Configuring a publishing source for your GitHub Pages site</em>. GitHub Docs. https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site</p>
+<p>Apple. (n.d.). <em>Turn a website into an app in Safari on iPad</em>. Apple Support. https://support.apple.com/en-gb/guide/ipad/ipad8f1f7a29/ipados</p>
+<p>MDN Web Docs. (n.d.). <em>Screen Wake Lock API</em>. https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API</p>
+</body></html>
